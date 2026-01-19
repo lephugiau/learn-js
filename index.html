@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo List (localStorage)</title>
+  <style>
+    body { font-family: Arial; max-width: 520px; margin: 40px auto; padding: 0 12px; }
+    h2 { margin-bottom: 10px; }
+    .row { display: flex; gap: 8px; }
+    input[type="text"] { flex: 1; padding: 10px; }
+    button { padding: 10px 12px; cursor: pointer; }
+    ul { padding-left: 0; margin-top: 16px; }
+    li { list-style: none; display: flex; align-items: center; gap: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 10px; }
+    li .text { flex: 1; }
+    li .text.done { text-decoration: line-through; color: gray; }
+    .meta { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; color: #444; }
+    .actions { display: flex; gap: 8px; }
+    .hint { color: #666; font-size: 14px; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <h2>Todo List ✅ (lưu localStorage)</h2>
+
+  <div class="row">
+    <input id="todoInput" type="text" placeholder="Nhập công việc rồi Enter..." />
+    <button id="addBtn">Thêm</button>
+  </div>
+  <div class="hint">Tip: Nhấn Enter để thêm nhanh.</div>
+
+  <div class="meta">
+    <div id="counter">Done: 0 / 0</div>
+    <div class="actions">
+      <button id="clearDoneBtn">Clear Done</button>
+      <button id="clearAllBtn">Clear All</button>
+    </div>
+  </div>
+
+  <ul id="todoList"></ul>
+
+  <script src="main.js"></script>
+</body>
+</html>
